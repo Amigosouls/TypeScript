@@ -1,9 +1,9 @@
 class Employee{
     empname :string;
-    empid : number;
+    empid : number | string;
     empdesignation : string;
     empsalary : number;
-    empproject : string;
+    empproject ?: string;
 
     public getEmpDetails(empname:string, empid:number, empdesignation:string, empsalary:number, empproject:string) {
         this.empname = empname;
