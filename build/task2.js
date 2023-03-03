@@ -33,3 +33,4 @@ class Admin extends Employee {
 }
 let obj = new Admin("1356cs52", "UI design", 10, "Peter England", "Employee", "01AD100", "Karthick");
 obj.adminDetails();
+

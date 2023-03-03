@@ -40,3 +40,27 @@ class Admin extends Employee{
 }
 let obj = new Admin("1356cs52","UI design",10,"Peter England","Employee","01AD100","Karthick");
 obj.adminDetails();
+
+abstract class ElectricityBill{
+    public rate : number;
+    public units : number;
+    constructor(rate:number,units:number){
+        this.rate= rate;
+        this.units=units;
+    }
+    abstract billDetails():void;
+}
+
+class Domestic extends ElectricityBill{
+    public units:number;
+    public rate=5;
+    constructor(uni:number,rate:number,units:number){
+        super(rate,units);
+        this.units =uni;
+    }
+    billDetails(): void {
+        console.log()
+    }
+
+
+}
