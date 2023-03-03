@@ -52,15 +52,31 @@ abstract class ElectricityBill{
 }
 
 class Domestic extends ElectricityBill{
-    public units:number;
-    public rate=5;
+    
     constructor(uni:number,rate:number,units:number){
         super(rate,units);
         this.units =uni;
+        this.rate=rate;
     }
     billDetails(): void {
-        console.log()
+        console.log(`Bill details.... \n Units:${this.units} \n Rate=${this.rate}\n Total:${this.rate*this.units} Total:${this.rate*this.units}`);
     }
-
-
 }
+
+class Commercial extends ElectricityBill{
+  
+    constructor(uni:number,rate:number,units:number)
+    {
+        super(rate,units);
+        this.units=uni;
+        this.rate=rate;
+    }
+    billDetails(): void {
+        console.log(`Bill details.... \n Units:${this.units} \n Rate=${this.rate}\n Total:${this.rate*this.units} Total:${this.rate*this.units}`);
+    }
+}
+
+var domObj = new Domestic(10,5,10);
+domObj.billDetails();
+var comObj = new Commercial(10,5,10);
+comObj.billDetails();
